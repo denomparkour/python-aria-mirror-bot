@@ -88,8 +88,7 @@ def main():
     dispatcher.add_handler(log_handler)
     updater.start_polling()
     LOGGER.info("Bot Started!")
-    bot.send_message(
-        signal.signal(signal.SIGINT, fs_utils.exit_clean_up)
+    signal.signal(signal.SIGINT, fs_utils.exit_clean_up)
 
 
 main()
